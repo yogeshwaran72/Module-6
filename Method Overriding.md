@@ -1,55 +1,36 @@
-# # 🐍 Python OOP: Polymorphism with Classes
+# 🐟 Method Overriding-Fish and Shark Class Inheritance in Python
 
-## 🎯 AIM
+## 🧠 AIM:
+To write a Python program that demonstrates class inheritance by creating a parent class `Fish` with a method `type`, and a child class `Shark` that overrides the `type` method.
 
-To create two specific classes — `Beans` and `Mango`. Then, create a **generic function** that can accept any object and determine its **type** (Fruit or Vegetable) and **color**, using polymorphism.
+## 📋 ALGORITHM:
 
----
+1. Define the `Fish` class with a method named `type()` that prints `"fish"`.
+2. Define the `Shark` class as a subclass of `Fish`, and override the `type()` method to print `"shark"`.
+3. Create an instance of the `Fish` class named `obj_goldfish`.
+4. Create an instance of the `Shark` class named `obj_hammerhead`.
+5. Use a `for` loop to iterate over both objects.
+6. Within the loop, call the `type()` method using the loop variable.
+7. Output will demonstrate method overriding: printing `"fish"` and `"shark"` accordingly.
 
-## 🧠 ALGORITHM
-
-1. **Create Class `Beans`**:
-   - Define `type()` method that prints `"Vegetable"`.
-   - Define `color()` method that prints `"Green"`.
-
-2. **Create Class `Mango`**:
-   - Define `type()` method that prints `"Fruit"`.
-   - Define `color()` method that prints `"Yellow"`.
-
-3. **Define Generic Function `func(obj)`**:
-   - Call `obj.type()` and `obj.color()` — this works with both `Beans` and `Mango` objects, showcasing **polymorphism**.
-
-4. **Create Objects**:
-   - Instantiate `Beans` and `Mango`.
-   - Pass them to `func()` and execute the program.
-
----
-
-## 💻 Program
+## 💻 PROGRAM:
 ```
-  class Beans ():
-     def type(self):
-        print("Vegetable")
-     def color(self):
-        print("Green")
+class Fish:
+    def type(self):
+        print("fish")
 
-  class Mango ():
-     def type(self):
-        print("Fruit")
-     def color(self):
-        print("Yellow")
+class Shark(Fish):
+	def type(self):
+	    print("shark")
 
-     def func(obj):
-        obj.type()
-        obj.color()
+obj_goldfish=Fish()
+obj_hammerhead=Shark()
 
-  obj_beans = Beans()
-  obj_mango = Mango()
-  func(obj_beans)
-  func(obj_mango)
+obj_goldfish.type()
+obj_hammerhead.type()
 ```
-## Output
-![441832871-456ee9ef-9f30-4670-abc4-7b8f042c077a](https://github.com/user-attachments/assets/8415e42e-64a9-4ecb-8608-db02f4e49217)
+## OUTPUT
+![Screenshot 2025-05-26 092408](https://github.com/user-attachments/assets/a7e935c3-319a-42b1-a6e2-5d32bc8da01c)
 
-## Result
+## RESULT
 Thus the program has been verified successfully
